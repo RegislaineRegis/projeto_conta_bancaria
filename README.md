@@ -43,11 +43,11 @@ Neste projeto, foram desenvolvidas as seguintes habilidades:
 
  - [ ] [2 - Criar as Classes extends.](#2---Criar-as-Classes-extends)
 
- - [ ] [3 - Comparar se a data informada pelo usuário é a mesma data do aniversário, se for corrigir o valor em 0,05%.](#3---Comparar-se-a-data-informada-pelo-usuário-é-a-mesma-data-do-aniversário-se-for-corrigir-o-valor-em-0,05%s)
+ - [ ] [3 - [Regra de negocio: Conta Poupanca] Comparar se a data informada pelo usuário é a mesma data do aniversário, se for corrigir o valor em 0,05%.](#3---Regra-de-negocio-Conta-Poupanca-Comparar-se-a-data-informada-pelo-usuário-é-a-mesma-data-do-aniversário-se-for-corrigir-o-valor-em-0,05%s)
  
-******************************************************************************
-
- - [ ] [4 - Adicione à página um quadro de pixels, com 25 pixels.](#4---adicione-à-página-um-quadro-de-pixels-com-25-pixels)
+ - [ ] [4 - [Regra de negocio: Conta Corrente] Solicitar ao final dos 10 movimentos ou ao pedido de sair se o mesmo deseja solicitar cheque, limitando em apenas 3 cheques. Cada talão debita da conta um valor de R$30.](#4---Regra-de-negocio-Conta-Corrente-Solicitar-ao-final-dos-10-movimentos-ou-ao-pedido-de-sair-se-o-mesmo-deseja-solicitar-cheque-limitando-em-apenas-3-cheques-Cada-talão-debita-da-conta-um-valor-de-R$30)
+ 
+ ******************************************************************************
 
  - [ ] [5 - Faça com que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel.](#5---aplique-a-cada-elemento-do-quadro-de-pixels-deve-possuir-40-pixels-de-largura-e-40-pixels-de-altura-e-ser-delimitado-por-uma-borda-preta-de-1-pixel)
 
