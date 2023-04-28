@@ -47,9 +47,9 @@ Neste projeto, foram desenvolvidas as seguintes habilidades:
  
  - [ ] [4 - [Regra de negocio: Conta Corrente] Solicitar ao final dos 10 movimentos ou ao pedido de sair se o mesmo deseja solicitar cheque, limitando em apenas 3 cheques. Cada talão debita da conta um valor de R$30.](#4---Regra-de-negocio-Conta-Corrente-Solicitar-ao-final-dos-10-movimentos-ou-ao-pedido-de-sair-se-o-mesmo-deseja-solicitar-cheque-limitando-em-apenas-3-cheques-Cada-talão-debita-da-conta-um-valor-de-R$30)
  
- ******************************************************************************
+ - [ ] [5 - [Regra de negocio: Conta Especial] Usar o limite do saldo se no momento do movimento o saldo ficar negativo, ajusta no saldo e dimiuir no limite: Limite de R$1000](#5---Regra-de-negocio-Conta-Especial-Usar-o-limite-do-saldo-se-no-momento-do-movimento-o-saldo-ficar-negativo-ajusta-no-saldo-e-dimiuir-no-limite-Limite-de-R$1000)
 
- - [ ] [5 - Faça com que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel.](#5---aplique-a-cada-elemento-do-quadro-de-pixels-deve-possuir-40-pixels-de-largura-e-40-pixels-de-altura-e-ser-delimitado-por-uma-borda-preta-de-1-pixel)
+ ******************************************************************************
 
  - [ ] [6 - Definia a cor preta como cor inicial. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels](#6---executar-o-carregamento-da-página-a-cor-preta-da-paleta-já-deve-estar-selecionada-para-pintar-os-pixels)
 
