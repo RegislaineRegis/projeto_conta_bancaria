@@ -43,11 +43,11 @@ Neste projeto, foram desenvolvidas as seguintes habilidades:
 
  - [x] [2 - Criar as Classes extends.](#2---Criar-as-Classes-extends)
 
- - [ ] [3 - [Regra de negocio: Conta Poupanca] Comparar se a data informada pelo usuário é a mesma data do aniversário, se for corrigir o valor em 0,05%.](#3---Regra-de-negocio-Conta-Poupanca-Comparar-se-a-data-informada-pelo-usuário-é-a-mesma-data-do-aniversário-se-for-corrigir-o-valor-em-0,05%s)
+ - [x] [3 - [Regra de negocio: Conta Poupanca] Comparar se a data informada pelo usuário é a mesma data do aniversário, se for corrigir o valor em 0,05%.](#3---Regra-de-negocio-Conta-Poupanca-Comparar-se-a-data-informada-pelo-usuário-é-a-mesma-data-do-aniversário-se-for-corrigir-o-valor-em-0,05%s)
  
- - [ ] [4 - [Regra de negocio: Conta Corrente] Solicitar ao final dos 10 movimentos ou ao pedido de sair se o mesmo deseja solicitar cheque, limitando em apenas 3 cheques. Cada talão debita da conta um valor de R$30.](#4---Regra-de-negocio-Conta-Corrente-Solicitar-ao-final-dos-10-movimentos-ou-ao-pedido-de-sair-se-o-mesmo-deseja-solicitar-cheque-limitando-em-apenas-3-cheques-Cada-talão-debita-da-conta-um-valor-de-R$30)
+ - [x] [4 - [Regra de negocio: Conta Corrente] Solicitar ao final dos 10 movimentos ou ao pedido de sair se o mesmo deseja solicitar cheque, limitando em apenas 3 cheques. Cada talão debita da conta um valor de R$30.](#4---Regra-de-negocio-Conta-Corrente-Solicitar-ao-final-dos-10-movimentos-ou-ao-pedido-de-sair-se-o-mesmo-deseja-solicitar-cheque-limitando-em-apenas-3-cheques-Cada-talão-debita-da-conta-um-valor-de-R$30)
  
- - [ ] [5 - [Regra de negocio: Conta Especial] Usar o limite do saldo se no momento do movimento o saldo ficar negativo, ajusta no saldo e dimiuir no limite: Limite de R$1000](#5---Regra-de-negocio-Conta-Especial-Usar-o-limite-do-saldo-se-no-momento-do-movimento-o-saldo-ficar-negativo-ajusta-no-saldo-e-dimiuir-no-limite-Limite-de-R$1000)
+ - [x] [5 - [Regra de negocio: Conta Especial] Usar o limite do saldo se no momento do movimento o saldo ficar negativo, ajusta no saldo e dimiuir no limite: Limite de R$1000](#5---Regra-de-negocio-Conta-Especial-Usar-o-limite-do-saldo-se-no-momento-do-movimento-o-saldo-ficar-negativo-ajusta-no-saldo-e-dimiuir-no-limite-Limite-de-R$1000)
 
  - [ ] [6 -  [Regra de negocio: Conta Empresa] Solicitar a qualquer tempo, ou após os 10 movimentos o uso do emprestimo (limitando a R$10.000) levando o valor para o saldo.](#6---Regra-de-negocio-Conta-Empresa-Solicitar-a-qualquer-tempo-ou-após-os-10-movimentos-o-uso-do-emprestimo-limitando-a-R$10000-levando-o-valor-para-o-saldo)
 
