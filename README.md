@@ -3,7 +3,7 @@
 Um sistema computacional, de uma conta bancária, utilizando os principais conceitos estudados em Java. 
 
 ## Nome do banco 
-  Cem saldo
+  Cem saldo G[6666]
   
 ## Slogan Banco
   Vem ficar Cem Saldo você Também!
@@ -41,7 +41,7 @@ Neste projeto, foram desenvolvidas as seguintes habilidades:
 
  - [x] [1 - Criar a Classe Conta.](#1---Criar-a-Classe-Conta)
 
- - [ ] [2 - Criar as Classes extends.](#2---Criar-as-Classes-extends)
+ - [x] [2 - Criar as Classes extends.](#2---Criar-as-Classes-extends)
 
  - [ ] [3 - [Regra de negocio: Conta Poupanca] Comparar se a data informada pelo usuário é a mesma data do aniversário, se for corrigir o valor em 0,05%.](#3---Regra-de-negocio-Conta-Poupanca-Comparar-se-a-data-informada-pelo-usuário-é-a-mesma-data-do-aniversário-se-for-corrigir-o-valor-em-0,05%s)
  
@@ -49,13 +49,14 @@ Neste projeto, foram desenvolvidas as seguintes habilidades:
  
  - [ ] [5 - [Regra de negocio: Conta Especial] Usar o limite do saldo se no momento do movimento o saldo ficar negativo, ajusta no saldo e dimiuir no limite: Limite de R$1000](#5---Regra-de-negocio-Conta-Especial-Usar-o-limite-do-saldo-se-no-momento-do-movimento-o-saldo-ficar-negativo-ajusta-no-saldo-e-dimiuir-no-limite-Limite-de-R$1000)
 
- ******************************************************************************
+ - [ ] [6 -  [Regra de negocio: Conta Empresa] Solicitar a qualquer tempo, ou após os 10 movimentos o uso do emprestimo (limitando a R$10.000) levando o valor para o saldo.](#6---Regra-de-negocio-Conta-Empresa-Solicitar-a-qualquer-tempo-ou-após-os-10-movimentos-o-uso-do-emprestimo-limitando-a-R$10000-levando-o-valor-para-o-saldo)
 
- - [ ] [6 - Definia a cor preta como cor inicial. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels](#6---executar-o-carregamento-da-página-a-cor-preta-da-paleta-já-deve-estar-selecionada-para-pintar-os-pixels)
-
- - [ ] [7 - Selecione uma das cores da paleta, ao clicar, a cor selecionada é a que será utilizada para preencher os pixels no quadro.](#7---clicar-em-uma-das-cores-da-paleta-a-cor-selecionada-é-que-vai-ser-usada-para-preencher-os-pixels-no-quadro)
-
- - [ ] [8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada.](#8---clicar-em-um-pixel-dentro-do-quadro-após-selecionar-uma-cor-na-paleta-o-pixel-deve-ser-preenchido-com-esta-cor)
-
- - [ ] [9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.](#9---crie-um-botão-que-ao-ser-clicado-limpa-o-quadro-preenchendo-a-cor-de-todos-seus-pixels-com-branco)
-
+ - [ ] [7 - [Regra de negocio: Conta Estudantil] Solicitar a qualquer tempo ou após os 10 movimentos o uso do emprestimo estudantil (limitado a R$5.000) levando o valor para o saldo.](#7---Regra-de-negocio-Conta-Estudantil-Solicitar-a-qualquer-tempo-ou-após-os-10-movimentos-o-uso-do-emprestimo-estudantil-limitado-a-R$5000-levando-o-valor-para-o-saldo)
+ 
+ - [ ] [8 - 10 movimentos - Débito ou Crédito.](#8---10-movimentos-Débito-ou-Crédito)
+ - [ ] [9 - Saldo Zero é possível.](#9---Saldo-Zero-é-possível)
+ - [ ] [10 - Nenhuma conta pode ficar negativa após os 10 movimentos.](#10---Nenhuma-conta-pode-ficar-negativa-após-os-10-movimentos)
+ - [x] [11 - O banco deve ter um nome +G[NUMERO GRUPO]](#11---O-banco-deve-ter-um-nome-+G-NUMERO-GRUPO)
+ - [x] [12 - O banco deve ter um Slogan (ex.: BANCO Miiiiiiiii-lhão - GO - Aqui ninguém é Mizeravi!.](#12---O-banco-deve-ter-um-Slogan-ex-BANCO-Miiiiiiiii-lhão-GO-Aqui-ninguém-é-Mizeravi)
+ - [x] [13 - Menu para selecionar conta.](#13---Menu-para-selecionar-conta)
+ - [x] [14 - Menu2 [Apos o usuario escolher o tipo de conta]](#14---Menu2-Apos-o-usuario-escolher-o-tipo-de-conta)
