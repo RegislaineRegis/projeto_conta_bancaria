@@ -23,10 +23,6 @@ abstract class Conta {
     }    
   }
 
-  public void setSaldo(float saldo) {
-    this.saldo = saldo;      
-  }
-
   public void setAtivo(Boolean ativo) {
     this.ativo = ativo;      
   }
