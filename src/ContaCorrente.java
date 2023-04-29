@@ -10,10 +10,6 @@ public class ContaCorrente extends Conta{
     return contadorTalao;
   }
 
-  public void setContadorTalao(int contadorTalao) {
-    this.contadorTalao = contadorTalao;
-  }
-
   public void pedirTalao(int contadorTalao) {
     this.contadorTalao = contadorTalao; 
   } 
