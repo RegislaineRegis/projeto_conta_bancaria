@@ -53,8 +53,8 @@ Neste projeto, foram desenvolvidas as seguintes habilidades:
 
  - [ ] [7 - [Regra de negocio: Conta Estudantil] Solicitar a qualquer tempo ou após os 10 movimentos o uso do emprestimo estudantil (limitado a R$5.000) levando o valor para o saldo.](#7---Regra-de-negocio-Conta-Estudantil-Solicitar-a-qualquer-tempo-ou-após-os-10-movimentos-o-uso-do-emprestimo-estudantil-limitado-a-R$5000-levando-o-valor-para-o-saldo)
  
- - [ ] [8 - 10 movimentos - Débito ou Crédito.](#8---10-movimentos-Débito-ou-Crédito)
- - [ ] [9 - Saldo Zero é possível.](#9---Saldo-Zero-é-possível)
+ - [x] [8 - 10 movimentos - Débito ou Crédito.](#8---10-movimentos-Débito-ou-Crédito)
+ - [x] [9 - Saldo Zero é possível.](#9---Saldo-Zero-é-possível)
  - [ ] [10 - Nenhuma conta pode ficar negativa após os 10 movimentos.](#10---Nenhuma-conta-pode-ficar-negativa-após-os-10-movimentos)
  - [x] [11 - O banco deve ter um nome +G[NUMERO GRUPO]](#11---O-banco-deve-ter-um-nome-+G-NUMERO-GRUPO)
  - [x] [12 - O banco deve ter um Slogan (ex.: BANCO Miiiiiiiii-lhão - GO - Aqui ninguém é Mizeravi!.](#12---O-banco-deve-ter-um-Slogan-ex-BANCO-Miiiiiiiii-lhão-GO-Aqui-ninguém-é-Mizeravi)
