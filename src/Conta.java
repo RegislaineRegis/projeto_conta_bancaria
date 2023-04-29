@@ -4,7 +4,7 @@ abstract class Conta {
   private int numero;
   private String cpf;
   protected float saldo;
-  private boolean ativo;
+  boolean ativo;
 
   public Conta(int numero, String cpf, float saldo, boolean ativo) {
     this.numero = numero;
