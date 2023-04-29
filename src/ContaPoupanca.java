@@ -15,10 +15,9 @@ public class ContaPoupanca extends Conta{
     this.diaAniversarioPoupanca = diaAniversarioPoupanca;
   }
 
-  @Override
   public void correcao(int diaAniversarioPoupanca) {
     if(this.diaAniversarioPoupanca == diaAniversarioPoupanca) {
-      this.saldo = (float) ((this.saldo * 0.05) + this.saldo);
+      saldo = (float) ((saldo * 0.05) + saldo);
     }else {
       System.out.println("O dia do aniversario da poupanca, está inválido!");
     }
