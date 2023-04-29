@@ -32,6 +32,7 @@ public class TestaConta {
     try (Scanner input = new Scanner(System.in)) {
       ContaPoupanca contaP = new ContaPoupanca(1236, "231.653.698-78", 1200, true, 13);
       ContaCorrente contaC = new ContaCorrente(2365, "362.659.789-03", 5600, true);
+      ContaEspecial contaE = new ContaEspecial(6593, "236.654.369-89", 50.0f, true);
       int opcao, dia, movimentoLoop = 10, qtdCheque;
       char movimento, continuar = 'S', solicitarCheque;
       float valor;
@@ -94,6 +95,45 @@ public class TestaConta {
               } else {
                 System.out.println("Sua quantidade de talão é limitado até 3 unidades!");
               }
+            }
+          } else {
+            System.out.println("sua conta não está ativa");
+          }
+          break;
+          case 3:
+          if (contaE.ativo) {
+            contaE.setLimite(1000);
+            while (continuar == 'S' || continuar == 's' || movimentoLoop < 0) {
+              menuDois(contaE.saldo, "ESPECIAL");
+              movimento = input.next().charAt(0);
+              System.out.println("Valor movimento: R$: ");
+              valor = input.nextFloat();
+              if (movimento == 'D' || movimento == 'd') {
+                if(contaE.saldo < valor) {
+                  valor = valor - contaE.saldo;
+                  contaE.saldo = 0;
+                  contaE.usarLimite(valor);
+                }
+                if(contaE.saldo == 0) {
+                  System.out.println("estamos aqui: " + contaE.getlimite());
+                  contaE.usarLimite(valor);
+                }else {
+                  contaE.debito(valor);
+                }
+                System.out.println("depois do usar limite: " + contaE.getlimite());            
+                //System.out.println("Você ainda tem um total de: "+ contaE.getlimite());
+                System.out.println("Seu saldo da Conta Especial é de: "+ contaE.saldo);
+                if(contaE.getlimite() < 0) {
+                  System.out.println("Você usou todo seu limite");
+                  break;
+                }               
+              }
+              if (movimento == 'C' || movimento == 'c') {
+                contaE.credito(valor);
+              }
+              movimentoLoop -= 1;        
+              System.out.println("Continuar S/N: ");
+              continuar = input.next().charAt(0);
             }
           } else {
             System.out.println("sua conta não está ativa");
