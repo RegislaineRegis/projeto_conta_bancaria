@@ -33,6 +33,7 @@ public class TestaConta {
       ContaPoupanca contaP = new ContaPoupanca(1236, "231.653.698-78", 1200, true, 13);
       ContaCorrente contaC = new ContaCorrente(2365, "362.659.789-03", 5600, true);
       ContaEspecial contaE = new ContaEspecial(6593, "236.654.369-89", 50.0f, true);
+      ContaEmpresa contaEmpresa = new ContaEmpresa(9820, "230.639.987-23", 20000.36f, true);
       int opcao, dia, movimentoLoop = 10, qtdCheque;
       char movimento, continuar = 'S', solicitarCheque;
       float valor, auxLimite;
@@ -43,24 +44,28 @@ public class TestaConta {
       switch (opcao) {
         case 1:
           if (contaP.ativo) {
-            while (continuar == 'S' || continuar == 's' || movimentoLoop < 0) {
-
-              System.out.println("Digite o dia do aniversario da poupanca: ");
-              dia = input.nextInt();
-              contaP.correcao(dia);
-              menuDois(contaP.saldo, "POUPANÇA");
-              movimento = input.next().charAt(0);
-              System.out.println("Valor movimento: R$: ");
-              valor = input.nextFloat();
-              if (movimento == 'D' || movimento == 'd') {
-                contaP.debito(valor);
-              }
-              if (movimento == 'C' || movimento == 'c') {
-                contaP.credito(valor);
-              }
-              movimentoLoop -= 1;
-              System.out.println("Continuar S/N: ");
-              continuar = input.next().charAt(0);
+            while (continuar == 'S' || continuar == 's' || movimentoLoop < 0 ) {
+              if(contaP.saldo > -1){
+                System.out.println("Digite o dia do aniversario da poupanca: ");
+                dia = input.nextInt();
+                contaP.correcao(dia);
+                menuDois(contaP.saldo, "POUPANÇA");
+                movimento = input.next().charAt(0);
+                System.out.println("Valor movimento: R$: ");
+                valor = input.nextFloat();
+                if (movimento == 'D' || movimento == 'd') {
+                  contaP.debito(valor);
+                }
+                if (movimento == 'C' || movimento == 'c') {
+                  contaP.credito(valor);
+                }
+                movimentoLoop -= 1;
+                System.out.println("Continuar S/N: ");
+                continuar = input.next().charAt(0);
+              } else {
+                System.out.println("Sua conta esta negativa!!!");
+                break;
+              }              
             }
           } else {
             System.out.println("sua conta não está ativa");
@@ -69,33 +74,44 @@ public class TestaConta {
         case 2:
           if (contaC.ativo) {
             while (continuar == 'S' || continuar == 's' || movimentoLoop < 0) {
-              menuDois(contaC.saldo, "CORRENTE");
-              movimento = input.next().charAt(0);
-              System.out.println("Valor movimento: R$: ");
-              valor = input.nextFloat();
-              if (movimento == 'D' || movimento == 'd') {
-                contaC.debito(valor);
+              if(contaC.saldo > -1){
+                menuDois(contaC.saldo, "CORRENTE");
+                movimento = input.next().charAt(0);
+                System.out.println("Valor movimento: R$: ");
+                valor = input.nextFloat();
+                if (movimento == 'D' || movimento == 'd') {
+                  contaC.debito(valor);
+                }
+                if (movimento == 'C' || movimento == 'c') {
+                  contaC.credito(valor);
+                }
+                movimentoLoop -= 1;
+                System.out.println("Continuar S/N: ");
+                continuar = input.next().charAt(0);
+              } else {
+                System.out.println("Sua conta esta negativa!!!");
+                break; 
               }
-              if (movimento == 'C' || movimento == 'c') {
-                contaC.credito(valor);
-              }
-              movimentoLoop -= 1;
-              System.out.println("Continuar S/N: ");
-              continuar = input.next().charAt(0);
             }
             System.out.println("Você deseja solicitar cheque S/N ? ");
             solicitarCheque = input.next().charAt(0);
-            if (solicitarCheque == 'S' || solicitarCheque == 's') {
-              System.out.println("Qual a quantidade de talão:  ");
-              qtdCheque = input.nextInt();
-              if (qtdCheque <= 3) {
-                contaC.pedirTalao(qtdCheque);
-                contaC.debito((qtdCheque * 30));
-                menuDois(contaC.saldo, "CORRENTE");
-              } else {
-                System.out.println("Sua quantidade de talão é limitado até 3 unidades!");
+            if(contaC.saldo > 0){
+              if (solicitarCheque == 'S' || solicitarCheque == 's') {
+                System.out.println("Qual a quantidade de talão:  ");
+                qtdCheque = input.nextInt();
+                if (qtdCheque <= 3) {
+                  contaC.pedirTalao(qtdCheque);
+                  contaC.debito((qtdCheque * 30));
+                  menuDois(contaC.saldo, "CORRENTE");
+                } else {
+                  System.out.println("Sua quantidade de talão é limitado até 3 unidades!");
+                }
               }
+            } else {
+              System.out.println("Sua conta esta negativa!!!");
+              break; 
             }
+              
           } else {
             System.out.println("sua conta não está ativa");
           }
@@ -108,7 +124,7 @@ public class TestaConta {
               movimento = input.next().charAt(0);
               System.out.println("Valor movimento: R$: ");
               valor = input.nextFloat();
-              if (contaE.getlimite() != 0) {
+              if (contaE.getLimite() != 0) {
                 if (movimento == 'D' || movimento == 'd') {
                   if (contaE.saldo == 0) {
                     contaE.usarLimite(valor);
@@ -122,21 +138,21 @@ public class TestaConta {
                   if (contaE.saldo >= valor) {
                     contaE.debito(valor);
                   }
-                  System.out.println("Você ainda tem um total limite de:: " + contaE.getlimite());
+                  System.out.println("Você ainda tem um total limite de:: " + contaE.getLimite());
                   System.out.println("Seu saldo da Conta Especial é de: " + contaE.saldo);
                 }
                 if (movimento == 'C' || movimento == 'c') {
 
-                  if (contaE.getlimite() < 1000) {
-                    auxLimite = 1000 - contaE.getlimite();
+                  if (contaE.getLimite() < 1000) {
+                    auxLimite = 1000 - contaE.getLimite();
                     valor = valor - auxLimite;
                     contaE.saldo = valor;
                     contaE.setLimite(1000);
                   }
-                  if (contaE.getlimite() == 1000) {
+                  if (contaE.getLimite() == 1000) {
                     contaE.credito(valor);
                   }
-                  System.out.println("Você ainda tem um total limite de:: " + contaE.getlimite());
+                  System.out.println("Você ainda tem um total limite de:: " + contaE.getLimite());
                   System.out.println("Seu saldo da Conta Especial é de: " + contaE.saldo);
                   menuDois(contaE.saldo, "ESPECIAL");
                 }
@@ -153,6 +169,17 @@ public class TestaConta {
             System.out.println("sua conta não está ativa");
           }
           break;
+        case 4:
+        if (contaEmpresa.ativo) {
+          while (continuar == 'S' || continuar == 's' || movimentoLoop < 0) {
+          
+          
+          }
+
+        } else {
+          System.out.println("sua conta não está ativa");
+        }
+        break;
       }
     }
   }

@@ -6,7 +6,7 @@ public class ContaEspecial extends Conta {
     super(numero, cpf, saldo, ativo);
   }
 
-  public float getlimite() {
+  public float getLimite() {
     return limite;
   }
 
