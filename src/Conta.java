@@ -6,9 +6,11 @@ public class Conta {
   protected float saldo;
   private boolean ativo;
 
-  public Conta(int numero, String cpf) {
+  public Conta(int numero, String cpf, float saldo, boolean ativo) {
     this.numero = numero;
     this.cpf = cpf;
+    this.saldo = saldo;
+    this.ativo = ativo;
   }
 
   public int getNumero() {
@@ -16,7 +18,17 @@ public class Conta {
   }
 
   public void setNumero(int numero) {
-    this.numero = numero;
+    if(numero > 0) {
+      this.numero = numero;
+    }    
+  }
+
+  public void setSaldo(float saldo) {
+    this.saldo = saldo;      
+  }
+
+  public void setAtivo(Boolean ativo) {
+    this.ativo = ativo;      
   }
 
   public String getCpf() {
@@ -38,4 +50,8 @@ public class Conta {
       this.saldo += valor;
     }    
   }
+
+  public void correcao(int dia) {
+  }
+   
 }
