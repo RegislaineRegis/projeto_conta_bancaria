@@ -1,5 +1,5 @@
 
-public class Conta {
+abstract class Conta {
 
   private int numero;
   private String cpf;
@@ -14,7 +14,7 @@ public class Conta {
   }
 
   public int getNumero() {
-    return numero;
+    return numero; 
   }
 
   public void setNumero(int numero) {
@@ -49,9 +49,6 @@ public class Conta {
     if(this.ativo) {
       this.saldo += valor;
     }    
-  }
-
-  public void correcao(int dia) {
   }
    
 }
