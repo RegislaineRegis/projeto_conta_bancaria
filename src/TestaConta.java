@@ -35,7 +35,7 @@ public class TestaConta {
       ContaEspecial contaE = new ContaEspecial(6593, "236.654.369-89", 50.0f, true);
       int opcao, dia, movimentoLoop = 10, qtdCheque;
       char movimento, continuar = 'S', solicitarCheque;
-      float valor;
+      float valor, auxLimite;
 
       menu();
       opcao = input.nextInt();
@@ -100,7 +100,7 @@ public class TestaConta {
             System.out.println("sua conta não está ativa");
           }
           break;
-          case 3:
+        case 3:
           if (contaE.ativo) {
             contaE.setLimite(1000);
             while (continuar == 'S' || continuar == 's' || movimentoLoop < 0) {
@@ -108,33 +108,47 @@ public class TestaConta {
               movimento = input.next().charAt(0);
               System.out.println("Valor movimento: R$: ");
               valor = input.nextFloat();
-              if (movimento == 'D' || movimento == 'd') {
-                if(contaE.saldo < valor) {
-                  valor = valor - contaE.saldo;
-                  contaE.saldo = 0;
-                  contaE.usarLimite(valor);
+              if (contaE.getlimite() != 0) {
+                if (movimento == 'D' || movimento == 'd') {
+                  if (contaE.saldo == 0) {
+                    contaE.usarLimite(valor);
+                    contaE.saldo = 0;
+                  }
+                  if (contaE.saldo < valor && contaE.saldo != 0) {
+                    valor = valor - contaE.saldo;
+                    contaE.saldo = 0;
+                    contaE.usarLimite(valor);
+                  }
+                  if (contaE.saldo >= valor) {
+                    contaE.debito(valor);
+                  }
+                  System.out.println("Você ainda tem um total limite de:: " + contaE.getlimite());
+                  System.out.println("Seu saldo da Conta Especial é de: " + contaE.saldo);
                 }
-                if(contaE.saldo == 0) {
-                  System.out.println("estamos aqui: " + contaE.getlimite());
-                  contaE.usarLimite(valor);
-                }else {
-                  contaE.debito(valor);
+                if (movimento == 'C' || movimento == 'c') {
+
+                  if (contaE.getlimite() < 1000) {
+                    auxLimite = 1000 - contaE.getlimite();
+                    valor = valor - auxLimite;
+                    contaE.saldo = valor;
+                    contaE.setLimite(1000);
+                  }
+                  if (contaE.getlimite() == 1000) {
+                    contaE.credito(valor);
+                  }
+                  System.out.println("Você ainda tem um total limite de:: " + contaE.getlimite());
+                  System.out.println("Seu saldo da Conta Especial é de: " + contaE.saldo);
+                  menuDois(contaE.saldo, "ESPECIAL");
                 }
-                System.out.println("depois do usar limite: " + contaE.getlimite());            
-                //System.out.println("Você ainda tem um total de: "+ contaE.getlimite());
-                System.out.println("Seu saldo da Conta Especial é de: "+ contaE.saldo);
-                if(contaE.getlimite() < 0) {
-                  System.out.println("Você usou todo seu limite");
-                  break;
-                }               
+              } else {
+                System.out.println("Você usou todo seu limite");
+                break;
               }
-              if (movimento == 'C' || movimento == 'c') {
-                contaE.credito(valor);
-              }
-              movimentoLoop -= 1;        
+              movimentoLoop -= 1;
               System.out.println("Continuar S/N: ");
               continuar = input.next().charAt(0);
             }
+
           } else {
             System.out.println("sua conta não está ativa");
           }

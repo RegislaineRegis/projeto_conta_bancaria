@@ -10,8 +10,8 @@ public class ContaEspecial extends Conta {
     return limite;
   }
 
-  public void setLimite(float limite) {
-    this.limite = limite;
+  public void setLimite(float valor) {
+    this.limite += valor;
   }
 
   public void usarLimite(float valor) {
