@@ -16,6 +16,5 @@ public class ContaEmpresa extends Conta {
   
   public void pedriEmprestimo(float valor) {
     emprestimoEmpresa -= valor;
-    saldo += valor;
   }
 }
