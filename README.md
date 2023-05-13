@@ -49,9 +49,9 @@ Neste projeto, foram desenvolvidas as seguintes habilidades:
  
  - [x] [5 - [Regra de negocio: Conta Especial] Usar o limite do saldo se no momento do movimento o saldo ficar negativo, ajusta no saldo e dimiuir no limite: Limite de R$1000](#5---Regra-de-negocio-Conta-Especial-Usar-o-limite-do-saldo-se-no-momento-do-movimento-o-saldo-ficar-negativo-ajusta-no-saldo-e-dimiuir-no-limite-Limite-de-R$1000)
 
- - [ ] [6 -  [Regra de negocio: Conta Empresa] Solicitar a qualquer tempo, ou após os 10 movimentos o uso do emprestimo (limitando a R$10.000) levando o valor para o saldo.](#6---Regra-de-negocio-Conta-Empresa-Solicitar-a-qualquer-tempo-ou-após-os-10-movimentos-o-uso-do-emprestimo-limitando-a-R$10000-levando-o-valor-para-o-saldo)
+ - [x] [6 -  [Regra de negocio: Conta Empresa] Solicitar a qualquer tempo, ou após os 10 movimentos o uso do emprestimo (limitando a R$10.000) levando o valor para o saldo.](#6---Regra-de-negocio-Conta-Empresa-Solicitar-a-qualquer-tempo-ou-após-os-10-movimentos-o-uso-do-emprestimo-limitando-a-R$10000-levando-o-valor-para-o-saldo)
 
- - [ ] [7 - [Regra de negocio: Conta Estudantil] Solicitar a qualquer tempo ou após os 10 movimentos o uso do emprestimo estudantil (limitado a R$5.000) levando o valor para o saldo.](#7---Regra-de-negocio-Conta-Estudantil-Solicitar-a-qualquer-tempo-ou-após-os-10-movimentos-o-uso-do-emprestimo-estudantil-limitado-a-R$5000-levando-o-valor-para-o-saldo)
+ - [x] [7 - [Regra de negocio: Conta Estudantil] Solicitar a qualquer tempo ou após os 10 movimentos o uso do emprestimo estudantil (limitado a R$5.000) levando o valor para o saldo.](#7---Regra-de-negocio-Conta-Estudantil-Solicitar-a-qualquer-tempo-ou-após-os-10-movimentos-o-uso-do-emprestimo-estudantil-limitado-a-R$5000-levando-o-valor-para-o-saldo)
  
  - [x] [8 - 10 movimentos - Débito ou Crédito.](#8---10-movimentos-Débito-ou-Crédito)
  - [x] [9 - Saldo Zero é possível.](#9---Saldo-Zero-é-possível)
